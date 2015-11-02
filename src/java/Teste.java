@@ -1,6 +1,7 @@
 
 import dataservices.dao.JPAUtil;
 import dataservices.dao.SerieDAO;
+import dataservices.dao.SerieDAOJPA;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import model.Genero;
@@ -22,10 +23,10 @@ public class Teste {
         EntityManager em = JPAUtil.getEntityManager();
         EntityTransaction tx = em.getTransaction();
         
-        Serie s = new Serie("LOST",Genero.ACAO,10,"Boa pacas",6);
+        Serie s = new Serie("dr house",Genero.DRAMA,1,"Boa pacas",6);
         
         
-        SerieDAO dao = new SerieDAO();
+        SerieDAOJPA dao = new SerieDAOJPA();
         dao.save(s);
         
         System.out.println("testando");

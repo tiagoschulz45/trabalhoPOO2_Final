@@ -8,6 +8,7 @@
 
 
 import dataservices.dao.SerieDAO;
+import dataservices.dao.SerieDAOJPA;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -72,7 +73,7 @@ public class Servlet extends HttpServlet {
             
             Serie s = new Serie(nome,gen,classific,sinopse,tempor);
             
-            SerieDAO dao = new SerieDAO();
+            SerieDAOJPA dao = new SerieDAOJPA();
             dao.save(s);
             
             response.sendRedirect("index.html");
