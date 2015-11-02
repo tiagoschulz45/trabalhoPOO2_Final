@@ -1,0 +1,71 @@
+
+<html>
+    <head>
+        <script>
+            function salvo() {
+                alert( "Salvo com sucesso" );
+            }
+</script>
+        
+        <title>Cadastro de Séries</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="Servlet" method="POST">
+            <table>
+                <tr>
+                    <td align="right">
+                        Nome
+                    </td>
+                    <td>
+                        <input type="text" name="nome" value="" size="40" required name="nome"/><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        Classificação
+                    </td>
+                    <td>
+                        <input type="text" name="classificacao" value="" required name="classificação"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        Gênero
+                    </td>
+                    <td>
+                        <select size="1" name="genero" required name="gênero">
+                            <option value="COMEDIA">Comédia</option>
+                            <option value="ACAO">Ação</option>
+                            <option value="FICCAO">Ficção</option>
+                            <option value="DRAMA">Drama</option>
+                            <option value="DOCUMENTARIO">Documentário</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        Sinopse
+                    </td>
+                    <td>
+                        <textarea rows="3" cols="40" maxlength="120" name="sinopse" required name="sinopse"></textarea>
+                    </td>
+                </tr>
+                 <tr>
+                    <td align="right">
+                        Nº de Temporadas
+                    </td>
+                    <td>
+                        <input type="text" name="temporadas" value="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="salvar" name="adicionar" size="10"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
